@@ -38,6 +38,59 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+body {
+	font-family: "Playfair Display", Georgia, serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.7;
+	color: #828282;
+	background: #fff; }
+  
+  .btn-wsp{
+	  position:fixed;
+	  width:70px;
+	  height:63px;
+	  line-height: 65px;
+	  bottom:15.5px;
+	  left:25px;
+	  background: rgb(242,75,106);
+	  background: linear-gradient(90deg, rgba(242,75,106,1) 0%, rgba(143,73,242,1) 100%);
+	  color:#FFF;
+	  border-radius:50px;
+	  text-align:center;
+	  font-size:42px;
+	  box-shadow: 0px 1px 10px rgba(24, 19, 19, 0.3);
+	  z-index:100;
+	  transition: all 300ms ease;
+	  animation: pulso-whatsapp 2s infinite;
+	}
+	@keyframes pulso-whatsapp {
+	  0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgb(255, 0, 255);
+	  }
+	  70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 30px rgba(117, 33, 117, 0);
+	  }
+	  100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(88, 214, 141, 0);
+	  }
+  }
+  .btn-wsp:hover{
+	  background: #36d674;
+	  transform: scale(1.1);
+  }
+  @media only screen and (min-width:320px) and (max-width:768px){
+	  .btn-wsp{
+		  width:63px;
+		  height:63px;
+		  line-height: 66px;
+	  }
+  }
+  
+
 h1,
 h2,
 h3,
