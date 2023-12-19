@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="DJoz Template">
-    <meta name="keywords" content="DJoz, unica, creative, html">
+    <meta name="description" content="Lysoft Digital">
+    <meta name="keywords" content="Lysoft Digital | Diseño y Desarrollo de Software">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lysoft Digital | Diseño y Desarrollo de Software</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -81,7 +83,44 @@
                 <div class="col-lg-12">
                     <div class="hero__text">
                         <br> <br>
-                        <h1>Lysoft Digital</h1>
+                        <h1 id="texto-cambiante" class="typed"></h1>
+                        <script>
+                            var mensajes = [
+                                "asasasasas",
+                                "Nuevo mensaje 1",
+                                "Nuevo mensaje 2",
+                                // Añade más mensajes según sea necesario
+                            ];
+                        
+                            var opcionesTyped = {
+                                strings: mensajes,
+                                typeSpeed: 50, // Velocidad de escritura
+                                backSpeed: 25, // Velocidad de borrado
+                                startDelay: 500, // Retraso antes de comenzar a escribir
+                                backDelay: 1000, // Retraso antes de comenzar a borrar
+                                loop: true, // Repetir el ciclo
+                            };
+                        
+                            var typed = new Typed(".typed", opcionesTyped);
+                        
+                            // La función cambiarImagenSegunMensaje ahora se llama solo una vez al inicio para establecer la imagen inicial
+                            cambiarImagenSegunMensaje(0);
+                        
+                            function cambiarImagenSegunMensaje(arrayPos) {
+                                var imagen = document.getElementById("tuImagen");
+                                if (arrayPos === 0) {
+                                    imagen.src = "imagen1.jpg";
+                                } else if (arrayPos === 1) {
+                                    imagen.src = "imagen2.jpg";
+                                }
+                                // Agrega más casos según sea necesario
+                            }
+                        </script>
+                        
+                        
+                        
+                        
+                        
                         <a href="https://www.youtube.com/watch?v=K4DyBUG242c" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         <br>
                         <br>
@@ -675,6 +714,18 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
+    <script>
+        const typed = new Typed('.typed',{
+            strings: [
+                '<i class="mascota">Gato</i>',
+                '<i class="mascota">Gato</i>',
+                '<i class="mascota">Gato</i>',
+                '<i class="mascota">Gato</i>',
+            ]
+
+        })
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -688,6 +739,7 @@
     <!-- Music Plugin -->
     <script src="js/jquery.jplayer.min.js"></script>
     <script src="js/jplayerInit.js"></script>
+
 </body>
 
 </html>

@@ -319,12 +319,22 @@ background: linear-gradient(90deg, rgba(242,75,106,1) 0%, rgba(143,73,242,1) 100
 -----------------------*/
 
 .header {
-	background: rgba(42, 1, 74, 0.5);
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	z-index: 9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    backdrop-filter: blur(10px); /* Ajusta el valor de blur según sea necesario */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para algunos navegadores WebKit */
+    transition: background 0.3s ease;
+    background: linear-gradient(to right, rgba(23, 0, 41, 0.589), rgba(42, 1, 74, 0.474));
+    /* Cambia los colores y ajusta la dirección del degradado según tus preferencias */
+}
+
+
+.header.dark-bg {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.573), rgba(42, 1, 74, 0.562));
+    /* Cambia los colores y ajusta la dirección del degradado según tus preferencias */
 }
 
 .img{
@@ -349,7 +359,7 @@ background: linear-gradient(90deg, rgba(242,75,106,1) 0%, rgba(143,73,242,1) 100
 }
 
 .header__menu {
-	padding: 31px 0 27px;
+	padding: 21px 0 21px;
 	display: inline-block;
 	margin-right: 45px;
 }
@@ -475,7 +485,7 @@ background: linear-gradient(90deg, rgba(242,75,106,1) 0%, rgba(143,73,242,1) 100
 }
 
 .hero__text h1 {
-	font-size: 165px;
+	font-size: 135px;
 	font-family: "Rockville Solid Regular";
 	color: #ffffff;
 	margin-bottom: 30px;
